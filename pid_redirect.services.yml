@@ -1,0 +1,8 @@
+---
+services:
+  pid_redirect.pid_param_converter:
+    class: Drupal\pid_redirect\ParamConverter\FedoraPidParamConverter
+    arguments:
+      - '@entity_type.manager'
+    tags:
+      - name: paramconverter
