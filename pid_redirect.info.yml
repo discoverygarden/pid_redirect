@@ -1,0 +1,5 @@
+name: 'PID Redirect'
+description: "Redirect a pid url to a node with the given pid."
+type: module
+package: DGI
+core_version_requirement: ^8 || ^9

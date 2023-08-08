@@ -1,0 +1,18 @@
+---
+pid_redirect.fedora_pid_redirect:
+  path: '/islandora/object/{node}'
+  defaults:
+    _controller: Drupal\pid_redirect\Controller\IslandoraRedirectController::content
+  requirements:
+    _entity_access: node.view
+    # Regex adapted from https://wiki.lyrasis.org/display/FEDORA38/Fedora+Identifiers#FedoraIdentifiers-Syntaxpidsyntax
+    # and https://www.regextester.com/115428 (for the length limiting), and
+    # referencing the old I7 code as to how URL-escaped character sequences
+    # are counted: https://github.com/Islandora/islandora/blob/c34c7ac071ff0ac6802ea8701cb38a9f8ed49f76/includes/utilities.inc#L105-L116
+    node: ^(?=.{3,64})([A-Za-z0-9]|-|\.)+:(([A-Za-z0-9])|-|\.|~|_|(%[0-9A-F]{2}))+$
+  methods:
+    - GET
+  options:
+    parameters:
+      node:
+        type: fedora_pid
