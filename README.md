@@ -1,9 +1,8 @@
-# pid_redirect
+# PID Redirect
+
 ## Introduction
 
-The pid_redirect module provides a way to redirect a PID url to a
-different url. This is useful for when you want to redirect a PID to
-a node in modern islandora.
+The `pid_redirect` module provides a way to redirect a legacy Islandora URL to a migrated node in modern Islandora.
 
 ## Requirements
 
@@ -28,4 +27,4 @@ and or contact [discoverygarden].
 
 [discoverygarden]: http://support.discoverygarden.ca
 [gplv3]: http://www.gnu.org/licenses/gpl-3.0.txt
-[install]: https://drupal.org/documentation/install/modules-themes/modules-8
+[install]: https://www.drupal.org/docs/extending-drupal/installing-modules
