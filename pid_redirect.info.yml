@@ -1,7 +1,7 @@
 name: 'PID Redirect'
-description: "Redirect a pid url to a node with the given pid."
+description: "Redirect a PID URL to a node with the given PID."
 type: module
 package: DGI
-core_version_requirement: ^8 || ^9
+core_version_requirement: ^9 || ^10
 dependencies:
   - drupal:node
