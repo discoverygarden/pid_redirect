@@ -30,10 +30,10 @@ class IslandoraRedirectController extends ControllerBase {
       ->addCacheContexts(['url']);
 
     $url = $node->toUrl()->toString(TRUE);
-    return CacheableRedirectResponse::create(
+    return (new CacheableRedirectResponse(
       $url->getGeneratedUrl(),
-      Response::HTTP_PERMANENTLY_REDIRECT
-    )
+      Response::HTTP_PERMANENTLY_REDIRECT,
+    ))
       ->addCacheableDependency($cache_meta)
       ->addCacheableDependency($url);
   }
